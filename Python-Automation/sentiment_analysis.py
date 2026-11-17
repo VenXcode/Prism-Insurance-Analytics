@@ -1,39 +1,19 @@
 
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-# Initialize sentiment analyzer
-analyzer = SentimentIntensityAnalyzer()
-
-# Sample customer feedback
-feedback = "Excellent service, very satisfied with my policy."
-
-# Perform sentiment analysis
-result = analyzer.polarity_scores(feedback)
-
-print("Feedback:", feedback)
-print("Sentiment Scores:", result)
-
-# Classify sentiment
-score = result["compound"]
-
-if score >= 0.05:
-    sentiment = "Positive"
-elif score <= -0.05:
-    sentiment = "Negative"
-else:
-    sentiment = "Neutral"
-
-print("Final Sentiment:", sentiment)
-
+from pathlib import Path
 
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+# Define project paths
+BASE_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = BASE_DIR.parent
+
+INPUT_FILE = PROJECT_DIR / "Dataset" / "Insurance-Customer-Feedback.xlsx"
+OUTPUT_FILE = PROJECT_DIR / "Dataset" / "Insurance_Sentiment_Results.xlsx"
+
 # Initialize VADER
 analyzer = SentimentIntensityAnalyzer()
 
-# Read Excel file
-df = pd.read_excel("Insurance-Customer-Feedback.xlsx")
 
 # Function to classify sentiment
 def analyze_sentiment(feedback):
@@ -52,13 +32,28 @@ def analyze_sentiment(feedback):
 
     return pd.Series([sentiment, compound])
 
-# Apply sentiment analysis
-df[["Sentiment", "Compound Score"]] = df["Feedback"].apply(
-    analyze_sentiment
-)
 
-# Export results
-df.to_excel("Insurance_Sentiment_Results.xlsx", index=False)
+# Main execution
+def main():
 
-print("Sentiment analysis completed!")
-print(df[["Customer Name", "Sentiment", "Compound Score"]])
+    # Read Excel file
+    df = pd.read_excel(INPUT_FILE)
+
+    # Apply sentiment analysis
+    df[["Sentiment", "Compound Score"]] = df["Feedback"].apply(
+        analyze_sentiment
+    )
+
+    # Export results
+    df.to_excel(OUTPUT_FILE, index=False)
+
+    print("Sentiment analysis completed!")
+    print(f"Total records processed: {len(df)}")
+    print(f"Results saved to: {OUTPUT_FILE}")
+
+    print(df[["Customer Name", "Sentiment", "Compound Score"]])
+
+
+if __name__ == "__main__":
+    main()
+

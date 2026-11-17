@@ -105,14 +105,30 @@ Prism-Insurance-Analytics/
 
 ## How to Run the Python Automation
 
-1. Install Python on your system.
-2. Install the dependencies listed in `Python-Automation/requirements.txt`.
-3. Place the customer feedback Excel file in the input location expected by the script.
-4. Execute `sentiment_analysis.py` or use `run_sentiment.bat`.
-5. Check the generated Excel file for sentiment classifications and compound scores.
-6. Configure Windows Task Scheduler to run the script automatically.
+### Prerequisites
+- Python installed on your system
+- Required Python packages
 
-Update file paths in the script and batch file if your local folder structure differs.
+### Setup
+
+1. Clone or download this repository.
+2. Open the project folder in VS Code.
+3. Install the dependencies:
+
+   `pip install -r Python-Automation/requirements.txt`
+
+4. Ensure the input file `Insurance-Customer-Feedback.xlsx` is present inside the `Dataset` folder.
+5. Navigate to the `Python-Automation` folder.
+6. Execute `run_sentiment.bat` or run `sentiment_analysis.py` using Python.
+7. The processed output, `Insurance_Sentiment_Results.xlsx`, will be generated inside the `Dataset` folder.
+
+### Scheduled Execution
+
+Windows Task Scheduler can be configured to execute the batch file daily at 9 PM.
+
+The generated Excel file can then be refreshed in Power BI to display the latest sentiment analysis results.
+
+**Note:** The scheduled Python execution updates the Excel file. Power BI refresh is a separate operation.
 
 ## Key Learning Outcomes
 

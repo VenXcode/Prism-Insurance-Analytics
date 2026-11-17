@@ -14,8 +14,3 @@ This folder contains the Excel datasets used in the Prism Insurance Analytics pr
 The customer feedback dataset is processed using the Python sentiment analysis script in the `Python-Automation` folder.
 
 The generated sentiment results can be connected to Power BI for customer feedback analysis.
-
-## Data Source
-
-Dataset source and licensing information should be added here.
-

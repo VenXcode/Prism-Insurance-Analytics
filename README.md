@@ -95,10 +95,10 @@ Prism-Insurance-Analytics/
 │   └── README.md
 │
 ├── Screenshots/
-│   ├── dashboard-overview.png
-│   ├── sentiment-analysis.png
-│   ├── task-scheduler-configuration.jpg
-│   └── task-execution-history.jpg
+│   ├── dashboard-overview.jpeg
+│   ├── sentiment-analysis.jpeg
+│   ├── task-scheduler-configuration.jpeg
+│   └── task-execution-history.jpeg
 │
 └── README.md
 ```

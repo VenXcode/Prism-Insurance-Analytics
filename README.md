@@ -17,11 +17,11 @@ The Python script is configured to execute automatically every day at 9 PM using
 
 ### Insurance Analytics Dashboard
 
-![Insurance Dashboard](Screenshots/dashboard-overview.png)
+![Insurance Dashboard](Screenshots/dashboard-overview.jpeg)
 
 ### Customer Feedback Sentiment Analysis
 
-![Sentiment Analysis](Screenshots/sentiment-analysis.png)
+![Sentiment Analysis](Screenshots/sentiment-analysis.jpeg)
 
 ## Key Features
 
@@ -51,9 +51,9 @@ The Python script is configured to execute automatically every day at 9 PM using
 
 ### Automation Evidence
 
-![Task Scheduler Configuration](Screenshots/task-scheduler-configuration.jpg)
+![Task Scheduler Configuration](Screenshots/task-scheduler-configuration.jpeg)
 
-![Task Execution History](Screenshots/task-execution-history.jpg)
+![Task Execution History](Screenshots/task-execution-history.jpeg)
 
 ## Technology Stack
 

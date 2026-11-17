@@ -124,11 +124,9 @@ Update file paths in the script and batch file if your local folder structure di
 - Automating repetitive data analysis workflows.
 - Scheduling Python scripts using Windows Task Scheduler.
 
-## Important Notes
+## Important Note
 
 - The Power BI dashboard requires a separate refresh to display updated sentiment results.
-- Dataset source and licensing information should be documented in the Dataset folder.
-- Do not redistribute datasets unless their licence permits it.
 
 ---
 

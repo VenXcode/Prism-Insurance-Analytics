@@ -96,7 +96,6 @@ Prism-Insurance-Analytics/
 │
 ├── Screenshots/
 │   ├── dashboard-overview.png
-│   ├── insurance-dataset.png
 │   ├── sentiment-analysis.png
 │   ├── task-scheduler-configuration.jpg
 │   └── task-execution-history.jpg
